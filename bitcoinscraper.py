@@ -25,14 +25,29 @@ def check_balance(address):
     else:
         return None
 
-def save_seeds_to_file(seeds_with_balances, filename):
+def save_seeds_to_file(seeds_with_balances):
+    # Define the filename as 'seeds.txt'
+    filename = "seeds.txt"
+    
+    # Open the file in write mode
     with open(filename, 'w') as file:
         for seed, address, balance in seeds_with_balances:
+            # Write the seed, address, and balance to the file
             file.write(f"Seed: {seed.hex()}\n")
             file.write(f"Address: {address.decode()}\n")
             file.write(f"Balance: {balance} BTC\n")
             file.write("------------------------\n")
 
+# Example usage:
+# Assume seeds_with_balances is a list of tuples: (seed, address, balance)
+# Example (seed, address, balance) data:
+seeds_with_balances = [
+    (b'\x12\x34\x56\x78\x90\xab\xcd\xef', b'1A1zP1eP5QWck1deuVsZgV6A5VHGzHqj79Y', 0.5),
+    (b'\x87\x65\x43\x21\x00\x12\x34\x56', b'1Q2w3E4r5T6y7U8i9O0p9A8l7J7w1P2b3L', 0.8)
+]
+
+# Save the seeds and associated data to the file 'seeds.txt'
+save_seeds_to_file(seeds_with_balances)
 def main():
     num_seeds = int(input("Enter the number of seeds to generate: "))
     seeds_with_balances = []
