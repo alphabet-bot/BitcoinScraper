@@ -1,2 +1,2 @@
-This is a powerful tool that generates bitcoin seeds and the send requests to the blockchain to check the wallets balance onece the balance is positive the wallet info will be saved to a file called seeds_with_balances .
-DONT modify the time interval between the requests as the blockchain will not be  able to handle the amount of the requests and will have ERRORS .
+This is a powerful bitcoin scraper taht will generate bitcoin seeds and then send requests to the blockcahin to check the balance of the wallet if the wallet is positive it will save the wallet info to a file called seeds_with_balances.
+WARNING DONT CHANGE THE TIME INTERVAL OF THE BLACKCHAIN REQUESTES AS THE BLOCKCHAIN WILL NOT BE ABLE TO HANDLE THE AMONT OF REQUESTES AND WILL SHOW ERRORS
